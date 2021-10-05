@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,500;0,600;1,500;1,600&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background-color: hsl(210, 46%, 95%);
+	font-size: 13px;
+	font-weight: 500;
+	max-width: 90%;
+	margin: 15vh auto;
+	font-family: 'Barlow Semi Condensed', sans-serif;
+}
+
+.card {
+	border-radius: 10px;
+	padding: 30px;
+	margin-bottom: 25px;
+}
+
+.card .image {
+	position: absolute;
+	width: 110px;
+	top: 0;
+	right: 20px;
+	z-index: -3;
+}
+
+.first > .main,
+.first > .pre {
+	z-index: 1;
+}
+
+.card .card-header {
+	display: flex;
+    align-items: center;
+}
+
+.card .card-header img {
+	border-radius: 50%;
+	width: 35px;
+}
+
+.card .card-header .titles {
+	padding-left: 10px;
+	font-size: 0.9em;
+}
+
+.card-header .titles h4 {
+	opacity: 0.5;
+}
+
+.main {
+	opacity: 0.7;
+    line-height: 20px;
+}
+
+.pre {
+	padding: 15px 0;
+	font-size: 21px;
+	font-weight: 600;
+    line-height: 25px;
+}
+
+.first {
+	position: relative;
+	background-color: hsl(263, 55%, 52%);
+	color: hsl(0, 0%, 81%);
+	z-index: -5;
+}
+
+.first > .card-header > img,
+.forth > .card-header > img {
+	border: 1px solid #a775f1;
+}
+.second {
+	background-color: hsl(217, 19%, 35%);
+	color: hsl(210, 46%, 95%);
+}
+
+.third {
+	background-color: hsl(0, 0%, 100%);
+	color: hsl(217, 19%, 35%);
+	box-shadow: 2px 2px 5px hsl(0, 0%, 81%);
+}
+
+.forth {
+	background-color: hsl(219, 29%, 14%);
+	color: hsl(0, 0%, 81%);
+}
+
+.fifth {
+	background-color: hsl(0, 0%, 100%);
+	color: hsl(217, 19%, 35%);
+	box-shadow: 2px 2px 5px hsl(0, 0%, 81%);
+}
+
+@media (min-width: 768px) {
+    .container {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        gap: 13px 30px;
+    }
+
+    .first {
+        grid-column: 1/3;
+        grid-row: 1/2;
+    }
+
+    .second {
+        grid-column: 3/4;
+        grid-row: 1/2;
+    }
+
+    .third {
+    grid-column: 1/2;
+    grid-row: 2/3;
+    }
+
+    .forth {
+        grid-column: 2/4;
+        grid-row: 2/3;
+    }
+
+    .fifth {
+        grid-column: 4/5;
+        grid-row: 1/3;
+    }
+
+}
